@@ -15,57 +15,40 @@ export class HomePage {
   estado: any;
   latitude: any;
   longitude: any;
-  text: any;
+  upiicsa: any;
+  escom: any;
+  upiita: any;
 
   constructor(
     public navCtrl: NavController,
     private geo: Geolocation,
     private platform: Platform,
   ) {
-    if(this.platform.is('android')){
-      console.log('I\'m running on Android Device');
-      this.getPosition();
-    }
-  }
-
-  getPosition(){
-    var options = {
-      timeout: 5000
-    };
-
-    this.geo.getCurrentPosition(options).then(resp => {
-      //console.log(resp.coords.latitude);
-      //console.log(resp.coords.longitude);
-      this.latitude = resp.coords.latitude;
-      this.longitude = resp.coords.longitude;
-    }).catch((error) => {
-      console.log(error);
+    this.platform.ready().then(() => {
+    
     });
   }
 
   ngOnInit():void{
+    this.upiicsa = [19.395893, -99.092330];
+    this.escom = [19.504537, -99.146931];
+    this.upiita = [19.511614, -99.126188];
     this.drawMap();
   }
 
-  drawMap(){
-    this.getPosition();
-    this.map = Leaflet.map('map').fitWorld();
+  drawMap(): void {
+    
+    this.map = Leaflet.map('map').setView([19.3910038,-99.2837002], 11);
     Leaflet.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
       attribution: '',
     }).addTo(this.map);
-    this.map.locate({
-      setView: true,
-      maxZoom: 10
-    }).on('locationfound', (e) => {
-      let markerGroup = Leaflet.featureGroup();
-      let marker: any = Leaflet.marker([e.latitude, e.longitude]).on('click', () => {
-        alert('Marker clicked');
-      })
-      markerGroup.addLayer(marker);
-      this.map.addLayer(markerGroup);
-      }).on('locationerror', (err) => {
-        alert(err.message);
-    })
+    Leaflet.marker(this.upiicsa).addTo(this.map).bindPopup('UPIICSA');
+    Leaflet.marker(this.escom).addTo(this.map).bindPopup('ESCOM');
+    Leaflet.marker(this.upiita).addTo(this.map).bindPopup('<a href = "https://www.upiita.ipn.mx/" target = "_blank">UPIITA</a>');
+  }
+
+  details(a){
+    alert(a);
   }
 
 }
