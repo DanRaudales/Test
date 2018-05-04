@@ -15,27 +15,31 @@ export class HomePage {
   estado: any;
   latitude: any;
   longitude: any;
+  text: any;
 
   constructor(
     public navCtrl: NavController,
     private geo: Geolocation,
-    private platform: Platform
+    private platform: Platform,
   ) {
-    this.platform.ready().then(() => {
-    
-      var options = {
-        timeout: 5000
-      };
+    if(this.platform.is('android')){
+      console.log('I\'m running on Android Device');
+      this.getPosition();
+    }
+  }
 
-      this.geo.getCurrentPosition(options).then(resp => {
-        console.log(resp.coords.latitude);
-        console.log(resp.coords.longitude);
-        this.latitude = resp.coords.latitude;
-        this.longitude = resp.coords.longitude;
-      }).catch(() => {
-        console.log("Error to get location");
-      });
+  getPosition(){
+    var options = {
+      timeout: 5000
+    };
 
+    this.geo.getCurrentPosition(options).then(resp => {
+      //console.log(resp.coords.latitude);
+      //console.log(resp.coords.longitude);
+      this.latitude = resp.coords.latitude;
+      this.longitude = resp.coords.longitude;
+    }).catch((error) => {
+      console.log(error);
     });
   }
 
@@ -43,24 +47,25 @@ export class HomePage {
     this.drawMap();
   }
 
-  drawMap(): void {
+  drawMap(){
+    this.getPosition();
     this.map = Leaflet.map('map').fitWorld();
     Leaflet.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-      attribution: 'AppTuto',
-      maxZoom: 18
+      attribution: '',
     }).addTo(this.map);
     this.map.locate({
       setView: true,
-      maxZoom: 12
+      maxZoom: 10
     }).on('locationfound', (e) => {
       let markerGroup = Leaflet.featureGroup();
-      var latLang = [this.latitude, this.longitude];
-      let marker: any = Leaflet.marker(latLang).on('click', () => {
-        alert('Tú estás aquí');
-      });
+      let marker: any = Leaflet.marker([e.latitude, e.longitude]).on('click', () => {
+        alert('Marker clicked');
+      })
       markerGroup.addLayer(marker);
       this.map.addLayer(markerGroup);
-    });
+      }).on('locationerror', (err) => {
+        alert(err.message);
+    })
   }
 
 }

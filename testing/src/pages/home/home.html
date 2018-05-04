@@ -1,11 +1,14 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      <h3>{{latitude}}</h3>
+      <h3>{{longitude}}</h3>
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content [attr.noScroll]="shouldScroll">
+  <button (click)="getPosition()">Click me!</button>
+  <h1>{{text}}</h1>
   <div id="map"></div>
 </ion-content>
