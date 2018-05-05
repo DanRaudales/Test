@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { NavController, Platform } from 'ionic-angular';
-import { Geolocation } from '@ionic-native/geolocation';
+import { NavController, ModalController } from 'ionic-angular';
+import { DetailsPage } from '../details/details'
 
 import * as Leaflet from 'leaflet';
 
@@ -21,12 +21,8 @@ export class HomePage {
 
   constructor(
     public navCtrl: NavController,
-    private geo: Geolocation,
-    private platform: Platform,
+    public modalCtrl: ModalController
   ) {
-    this.platform.ready().then(() => {
-    
-    });
   }
 
   ngOnInit():void{
@@ -38,17 +34,26 @@ export class HomePage {
 
   drawMap(): void {
     
-    this.map = Leaflet.map('map').setView([19.3910038,-99.2837002], 11);
+    this.map = Leaflet.map('map').setView([19.4293208,-99.133871], 12);
     Leaflet.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
       attribution: '',
     }).addTo(this.map);
-    Leaflet.marker(this.upiicsa).addTo(this.map).bindPopup('UPIICSA');
-    Leaflet.marker(this.escom).addTo(this.map).bindPopup('ESCOM');
-    Leaflet.marker(this.upiita).addTo(this.map).bindPopup('<a href = "https://www.upiita.ipn.mx/" target = "_blank">UPIITA</a>');
+    Leaflet.marker(this.upiicsa).addTo(this.map).bindPopup('UPIICSA').on('contextmenu', () => {
+      this.details('UPIICSA');
+    });
+    //Leaflet.circle(this.upiicsa, { radius: 200, color: 'teal'}).addTo(this.map).bindPopup('UPIICSA');
+    Leaflet.marker(this.escom).addTo(this.map).bindPopup('ESCOM').on('contextmenu', () => {
+      this.details('ESCOM');
+    });
+    Leaflet.marker(this.upiita).addTo(this.map).bindPopup('<a href = "https://www.upiita.ipn.mx/" target = "_blank">UPIITA</a>').on('contextmenu', () => {
+      this.details('UPIITA');
+    });
   }
 
-  details(a){
-    alert(a);
+  details(a){    
+    let modal = this.modalCtrl.create(DetailsPage, { escuela: a });
+    modal.present();
+
   }
 
 }
