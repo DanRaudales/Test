@@ -180,6 +180,8 @@ export class HomePage {
  
           this.container.style.backgroundColor = 'white';
           this.container.style.backgroundImage = "url(../../assets/imgs/home-13.png)";
+          this.container.style.backgroundRepeat = 'no-repeat';
+          this.container.style.backgroundPosition = 'center';
           this.container.style.backgroundSize = "25px 25px";
           this. container.style.width = '30px';
           this.container.style.height = '30px';
