@@ -78,7 +78,7 @@ export class HomePage {
 
     //Clase para iconos personalizados
     this.icono = Leaflet.icon({
-      iconUrl: '../../assets/imgs/Escudo-UPIICSA.png',
+      iconUrl: 'assets/imgs/Escudo-UPIICSA.png',
   
       iconSize:     [45, 45], // size of the icon
       iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
@@ -179,7 +179,7 @@ export class HomePage {
           this.container = Leaflet.DomUtil.create('div', 'leaflet-bar leaflet-control leaflet-control-custom');
  
           this.container.style.backgroundColor = 'white';
-          this.container.style.backgroundImage = "url(../../assets/imgs/home-13.png)";
+          this.container.style.backgroundImage = "url(assets/imgs/home-13.png)";
           this.container.style.backgroundRepeat = 'no-repeat';
           this.container.style.backgroundPosition = 'center';
           this.container.style.backgroundSize = "25px 25px";
