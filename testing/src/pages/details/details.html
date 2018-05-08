@@ -1,10 +1,19 @@
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar color="primary" class="z-depth">
+    <ion-buttons left>
+      <button ion-button (click)="back()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
     <ion-title>
       {{school}}
-      <ion-icon name="close" (click)="back()"></ion-icon>
     </ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="save()" [class]="iconClass">
+        <ion-icon name="star"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 
 </ion-header>

@@ -1,12 +1,22 @@
 page-home {
-    [noScroll] {
-        overflow: hidden;
+    #a {
+        text-align: center;
+    }
+    ion-title{
+        text-align: center;
     }
     #map {
         height: 100%;
         width: 100%;
     }
-    #a {
-        text-align: center;
+    [noScroll] {
+        overflow: hidden;
+    }
+    .toolbar-ios ion-title{
+        padding: 0px;
+    }
+    .z-depth {
+        -webkit-box-shadow:0 4px 5px 0 rgba(0,0,0,0.14),0 1px 10px 0 rgba(0,0,0,0.12),0 2px 4px -1px rgba(0,0,0,0.3);
+        box-shadow:0 4px 5px 0 rgba(0,0,0,0.14),0 1px 10px 0 rgba(0,0,0,0.12),0 2px 4px -1px rgba(0,0,0,0.3);
     }
 }

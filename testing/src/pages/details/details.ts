@@ -8,10 +8,12 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class DetailsPage {
 
+  iconClass: any;
   school: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.school = navParams.get('escuela');
+    this.iconClass = 'icon-default'
   }
 
   ionViewDidLoad() {
@@ -20,6 +22,15 @@ export class DetailsPage {
 
   back(){
     this.navCtrl.pop();
+  }
+
+  save(){
+    if(this.iconClass == 'icon-default'){
+      this.iconClass = 'icon-star';
+    }
+    else {
+      this.iconClass = 'icon-default';
+    }
   }
 
 }

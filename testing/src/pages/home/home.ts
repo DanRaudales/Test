@@ -150,8 +150,8 @@ export class HomePage {
 
     this.mbUrl = 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw';
 
-    this.grayscale   = Leaflet.tileLayer(this.mbUrl, {id: 'mapbox.light', attribution: this.mbAttr}),
-		this.streets  = Leaflet.tileLayer(this.mbUrl, {id: 'mapbox.streets',   attribution: this.mbAttr});
+    this.grayscale   = Leaflet.tileLayer(this.mbUrl, {id: 'mapbox.light'}),
+		this.streets  = Leaflet.tileLayer(this.mbUrl, {id: 'mapbox.streets'});
     
     this.map = Leaflet.map('map', {
       center: [19.330858, -99.149997],
