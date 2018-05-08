@@ -28,8 +28,22 @@ export class HomePage {
   upiicsa: any;
   escom: any;
   upiita: any;
+  esm: any;
+  ese: any;
+  esimeaz: any;
+  esimecul: any;
+  esia: any;
+  esiatic: any;
+  cicsuma: any;
+  upibi; any;
+  esit: any;
   dg: any;
-  circulo: any;
+  dp: any;
+  libcul: any;
+  pinteres: any;
+  circulo1: any;
+  circulo2: any;
+  circulo3: any;
 
   constructor(
     public navCtrl: NavController,
@@ -41,13 +55,26 @@ export class HomePage {
     this.upiicsa = [19.395893, -99.092330];
     this.escom = [19.504537, -99.146931];
     this.upiita = [19.511614, -99.126188];
-    this.dg = [19.499722, -99.137741]
+    this.dg = [19.499722, -99.137741];
+    this.dp = [19.428857, -99.147456];
+    this.libcul = [19.329873, -99.112877];
+    this.esm = [19.451279, -99.168182];
+    this.ese = [19.454398, -99.168418];
+    this.esimeaz = [19.490023, -99.174056];
+    this.esimecul = [19.328543, -99.112639];
+    this.esia = [19.504720, -99.137017];
+    this.esiatic = [19.507284, -99.131257];
+    this.cicsuma = [19.080110, -98.959110];
+    this.upibi = [19.515435, -99.127259];
+    this.esit = [19.340480, -99.134333];
     this.drawMap();
   }
 
   drawMap(): void {
 
     this.escuelas =  Leaflet.layerGroup();
+
+    this.pinteres = Leaflet.layerGroup();
 
     //Clase para iconos personalizados
     this.icono = Leaflet.icon({
@@ -68,6 +95,54 @@ export class HomePage {
     Leaflet.marker(this.upiita).addTo(this.escuelas).bindPopup('<a href = "https://www.upiita.ipn.mx/" target = "_blank">UPIITA</a>').on('contextmenu', () => {
       this.details('UPIITA');
     });
+    Leaflet.marker(this.esm).addTo(this.escuelas).bindPopup('<a href = "http://www.esm.ipn.mx/" target = "_blank">ESM</a>').on('contextmenu', () => {
+      this.details('ESM');
+    });
+    Leaflet.marker(this.ese).addTo(this.escuelas).bindPopup('<a href = "http://www.ese.ipn.mx/" target = "_blank">ESE</a>').on('contextmenu', () => {
+      this.details('ESE');
+    });
+    Leaflet.marker(this.esimeaz).addTo(this.escuelas).bindPopup('ESIME AZCAPOTZALCO').on('contextmenu', () => {
+      this.details('ESIME AZCAPOTZALCO');
+    });
+    Leaflet.marker(this.esimecul).addTo(this.escuelas).bindPopup('ESIME CULHUACAN').on('contextmenu', () => {
+      this.details('ESIME CULHUACAN');
+    });
+    Leaflet.marker(this.esia).addTo(this.escuelas).bindPopup('ESIA').on('contextmenu', () => {
+      this.details('ESIA');
+    });
+    Leaflet.marker(this.esiatic).addTo(this.escuelas).bindPopup('ESIA TICOMÁN').on('contextmenu', () => {
+      this.details('ESIA TICOMÁN');
+    });
+    Leaflet.marker(this.cicsuma).addTo(this.escuelas).bindPopup('CICS UMA').on('contextmenu', () => {
+      this.details('CICS UMA');
+    });
+    Leaflet.marker(this.upibi).addTo(this.escuelas).bindPopup('UPIBI').on('contextmenu', () => {
+      this.details('UPIBI');
+    });
+    Leaflet.marker(this.upibi).addTo(this.escuelas).bindPopup('ESIT').on('contextmenu', () => {
+      this.details('ESIT');
+    });
+    
+    this.circulo1 = Leaflet.circle(this.dg, {
+      color: 'red',
+      fillColor: '#f03',
+      fillOpacity: 0.5,
+      radius: 300
+    }).addTo(this.pinteres).bindPopup("Instituto Politécnico Nacional");
+
+    this.circulo2 = Leaflet.circle(this.dp, {
+      color: 'blue',
+      fillColor: '#f03',
+      fillOpacity: 0.5,
+      radius: 300
+    }).addTo(this.pinteres).bindPopup("Dirección de publicaciones");
+
+    this.circulo3 = Leaflet.circle(this.libcul, {
+      color: 'green',
+      fillColor: '#f03',
+      fillOpacity: 0.5,
+      radius: 300
+    }).addTo(this.pinteres).bindPopup("Librería Culhuacán");
     
     this.mbAttr = 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
     '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
@@ -79,8 +154,8 @@ export class HomePage {
 		this.streets  = Leaflet.tileLayer(this.mbUrl, {id: 'mapbox.streets',   attribution: this.mbAttr});
     
     this.map = Leaflet.map('map', {
-      center: [19.4293208,-99.133871],
-      zoom: 12,
+      center: [19.330858, -99.149997],
+      zoom: 10,
       layers: [this.streets, this.escuelas]});
 
       this.baseLayers = {
@@ -89,7 +164,8 @@ export class HomePage {
       };
   
       this.overlays = {
-        "Escuelas": this.escuelas
+        "Escuelas": this.escuelas,
+        "Puntos de interes": this.pinteres
       };
 
       Leaflet.control.layers(this.baseLayers, this.overlays).addTo(this.map);
@@ -109,7 +185,7 @@ export class HomePage {
           this.container.style.height = '30px';
        
           this.container.onclick = function(){
-            map.setView([19.4293208,-99.133871], 12);
+            map.setView([19.330858, -99.149997], 10);
           }
           return this.container;
         },
@@ -117,12 +193,6 @@ export class HomePage {
 
       this.map.addControl(new this.customControl());
 
-      this.circulo = Leaflet.circle(this.dg, {
-        color: 'red',
-        fillColor: '#f03',
-        fillOpacity: 0.5,
-        radius: 300
-      }).addTo(this.map).bindPopup("Instituto Politécnico Nacional");
   }
 
   details(a){    
