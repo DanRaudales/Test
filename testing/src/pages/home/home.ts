@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, ModalController } from 'ionic-angular';
 import { DetailsPage } from '../details/details'
+import { CountriesServiceProvider } from '../../providers/countries-service/countries-service';
 
 import * as Leaflet from 'leaflet';
 
@@ -10,6 +11,7 @@ import * as Leaflet from 'leaflet';
 })
 export class HomePage {
 
+  items = ['UPIICSA', 'ESCOM', 'UPIITA'];
   map: any;
   escuelas: any;
   mbAttr: any;
@@ -45,13 +47,25 @@ export class HomePage {
   circulo2: any;
   circulo3: any;
 
+  public countries: any;
+  public city: any[] = [];
+
+  serachbar = false;
+
   constructor(
     public navCtrl: NavController,
+    public countriesService: CountriesServiceProvider,
     public modalCtrl: ModalController
   ) {
+    
+  }
+
+  showSearchBar(){
+
   }
 
   ngOnInit():void{
+    
     this.upiicsa = [19.395893, -99.092330];
     this.escom = [19.504537, -99.146931];
     this.upiita = [19.511614, -99.126188];
@@ -72,6 +86,20 @@ export class HomePage {
 
   drawMap(): void {
 
+    this.countriesService.getUsers()
+    .subscribe(
+      (data) => { // Success
+        this.countries = data['results'];
+        this.city.push(this.countries[0].locations[0].latLng.lat);
+      },
+      (error) =>{
+        console.error(error);
+      }
+    );
+
+    console.log(this.city);
+    console.log(this.upiicsa);
+
     this.escuelas =  Leaflet.layerGroup();
 
     this.pinteres = Leaflet.layerGroup();
@@ -83,7 +111,9 @@ export class HomePage {
       iconSize:     [45, 45], // size of the icon
       iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
       popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
-     });
+    });
+
+    
     
     Leaflet.marker(this.upiicsa, {icon: this.icono}).addTo(this.escuelas).bindPopup('UPIICSA').on('contextmenu', () => {
       this.details('UPIICSA');
@@ -200,7 +230,6 @@ export class HomePage {
   details(a){    
     let modal = this.modalCtrl.create(DetailsPage, { escuela: a });
     modal.present();
-
   }
 
 }

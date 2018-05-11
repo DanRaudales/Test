@@ -2,6 +2,26 @@ page-home {
     #a {
         text-align: center;
     }
+    /*.dropdown {
+        background: #843742;
+        margin-left: 4%;
+        width: 92%;
+        height: auto;
+        z-index: 10;
+        position: absolute;
+        align-items: center;
+        align-self: center;
+        text-align: center;
+        margin-top: 51px;
+        color: #c0999e;
+    }
+    ion-list {
+        margin: 0px !important;
+        padding: 10px;
+    }*/
+    ion-navbar {
+        height: 52px !important;
+    }
     ion-title{
         text-align: center;
     }
