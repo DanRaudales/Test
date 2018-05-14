@@ -25,9 +25,8 @@ page-home {
     ion-title{
         text-align: center;
     }
-    #map {
-        height: 100%;
-        width: 100%;
+    .tabbar {
+        background: #843742 !important;
     }
     [noScroll] {
         overflow: hidden;

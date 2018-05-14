@@ -28,7 +28,12 @@
         {{item}}
       </ion-list>
     </div>
+
+    <div id="map"></div>
 -->
 <ion-content [attr.noScroll]="shouldScroll">
-  <div id="map"></div>
+  <ion-tabs>
+    <ion-tab class="z-depth" [root]="home" tabTitle="Inicio" tabIcon="home"></ion-tab>
+    <ion-tab  class="z-depth" [root]="favs" tabTitle="Favoritos" tabIcon="star"></ion-tab>
+  </ion-tabs>  
 </ion-content>

@@ -7,13 +7,17 @@ import { HttpClientModule } from '@angular/common/http';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { DetailsPage } from '../pages/details/details';
+import { MapPage } from '../pages/map/map';
+import { FavoritesPage } from '../pages/favorites/favorites';
 import { CountriesServiceProvider } from '../providers/countries-service/countries-service';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    DetailsPage
+    DetailsPage,
+    MapPage,
+    FavoritesPage
   ],
   imports: [
     BrowserModule,
@@ -24,7 +28,9 @@ import { CountriesServiceProvider } from '../providers/countries-service/countri
   entryComponents: [
     MyApp,
     HomePage,
-    DetailsPage
+    DetailsPage,
+    MapPage,
+    FavoritesPage
   ],
   providers: [
     StatusBar,
