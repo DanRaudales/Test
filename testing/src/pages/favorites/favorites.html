@@ -1,3 +1,8 @@
 <ion-content>
-
+    <ion-list>
+        <button ion-item (click)="details(school)" *ngFor="let school of schools">
+            {{ school }}
+            <ion-icon name="arrow-forward" item-end></ion-icon>
+        </button>  
+    </ion-list>
 </ion-content>

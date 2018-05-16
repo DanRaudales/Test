@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
-import { DetailsPage } from '../details/details'
+import { DetailsPage } from '../details/details';
+import { Storage } from '@ionic/storage';
 //import { CountriesServiceProvider } from '../../providers/countries-service/countries-service';
 
 import * as Leaflet from 'leaflet';
@@ -51,6 +52,7 @@ export class MapPage {
     public navCtrl: NavController, 
    // public countriesService: CountriesServiceProvider,
    public modalCtrl: ModalController,
+   public storage: Storage,
     public navParams: NavParams
   ) {
 
@@ -219,9 +221,17 @@ export class MapPage {
 
   }
 
-  details(a){    
-    let modal = this.modalCtrl.create(DetailsPage, { escuela: a });
-    modal.present();
+  details(a){
+    this.storage.get('escuelas').then((val) => {
+      if ( val == a){
+        let modal = this.modalCtrl.create(DetailsPage, { escuela: a, star: true });
+        modal.present();
+      }
+      else {
+        let modal = this.modalCtrl.create(DetailsPage, { escuela: a, star: false });
+        modal.present();
+      }
+    });
   }
 
 }

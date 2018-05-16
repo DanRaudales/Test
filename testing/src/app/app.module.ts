@@ -9,6 +9,11 @@ import { HomePage } from '../pages/home/home';
 import { DetailsPage } from '../pages/details/details';
 import { MapPage } from '../pages/map/map';
 import { FavoritesPage } from '../pages/favorites/favorites';
+
+import { SearchfilterPipe } from '../pipes/searchfilter/searchfilter';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+import { IonicStorageModule } from '@ionic/storage';
 import { CountriesServiceProvider } from '../providers/countries-service/countries-service';
 
 @NgModule({
@@ -17,12 +22,16 @@ import { CountriesServiceProvider } from '../providers/countries-service/countri
     HomePage,
     DetailsPage,
     MapPage,
-    FavoritesPage
+    FavoritesPage,
+    SearchfilterPipe
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    IonicModule.forRoot(MyApp)
+    FormsModule,
+    ReactiveFormsModule,
+    IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [
