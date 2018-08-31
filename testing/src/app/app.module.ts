@@ -15,6 +15,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { IonicStorageModule } from '@ionic/storage';
 import { CountriesServiceProvider } from '../providers/countries-service/countries-service';
+import { ApiServiceProvider } from '../providers/api-service/api-service';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { CountriesServiceProvider } from '../providers/countries-service/countri
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    CountriesServiceProvider
+    CountriesServiceProvider,
+    ApiServiceProvider
   ]
 })
 export class AppModule {}

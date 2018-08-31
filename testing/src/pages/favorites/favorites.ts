@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, ModalController } from 'ionic-angular';
 import { DetailsPage } from '../details/details';
 import { Storage } from '@ionic/storage';
+import { ApiServiceProvider } from '../../providers/api-service/api-service';
 
 @IonicPage()
 @Component({
@@ -11,14 +12,24 @@ import { Storage } from '@ionic/storage';
 export class FavoritesPage {
 
   schools: any = [];
+  users: any[] = [];
 
   constructor(
     public navCtrl: NavController, 
     public modalCtrl: ModalController,
-    public storage: Storage
+    public storage: Storage,
+    private api: ApiServiceProvider
   ) {
     this.storage.get('escuelas').then((val) => {
       this.schools = val;
+    });
+  }
+
+  ionViewDidLoad(){
+    this.api.getData().subscribe((data) =>{
+      this.users = data['results'];
+    }, (error) => {
+      console.error(error)
     });
   }
 

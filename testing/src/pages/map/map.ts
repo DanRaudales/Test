@@ -48,9 +48,10 @@ export class MapPage {
   circulo2: any;
   circulo3: any;
 
+  users: any[] = [];
+
   constructor(
     public navCtrl: NavController, 
-   // public countriesService: CountriesServiceProvider,
    public modalCtrl: ModalController,
    public storage: Storage,
     public navParams: NavParams
@@ -61,21 +62,21 @@ export class MapPage {
   ngOnInit():void{
     
     this.upiicsa = [19.395893, -99.092330];
-     this.escom = [19.504537, -99.146931];
-     this.upiita = [19.511614, -99.126188];
-     this.dg = [19.499722, -99.137741];
-     this.dp = [19.428857, -99.147456];
-     this.libcul = [19.329873, -99.112877];
-     this.esm = [19.451279, -99.168182];
-     this.ese = [19.454398, -99.168418];
-     this.esimeaz = [19.490023, -99.174056];
-     this.esimecul = [19.328543, -99.112639];
-     this.esia = [19.504720, -99.137017];
-     this.esiatic = [19.507284, -99.131257];
-     this.cicsuma = [19.080110, -98.959110];
-     this.upibi = [19.515435, -99.127259];
-     this.esit = [19.340480, -99.134333];
-     this.drawMap();
+    this.escom = [19.504537, -99.146931];
+    this.upiita = [19.511614, -99.126188];
+    this.dg = [19.499722, -99.137741];
+    this.dp = [19.428857, -99.147456];
+    this.libcul = [19.329873, -99.112877];
+    this.esm = [19.451279, -99.168182];
+    this.ese = [19.454398, -99.168418];
+    this.esimeaz = [19.490023, -99.174056];
+    this.esimecul = [19.328543, -99.112639];
+    this.esia = [19.504720, -99.137017];
+    this.esiatic = [19.507284, -99.131257];
+    this.cicsuma = [19.080110, -98.959110];
+    this.upibi = [19.515435, -99.127259];
+    this.esit = [19.340480, -99.134333];
+    this.drawMap();
    }
 
    drawMap(): void {
@@ -106,8 +107,6 @@ export class MapPage {
       iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
       popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
     });
-
-    
     
     Leaflet.marker(this.upiicsa, {icon: this.icono}).addTo(this.escuelas).bindPopup('UPIICSA').on('contextmenu', () => {
       this.details('UPIICSA');

@@ -21,7 +21,7 @@ export class HomePage {
   constructor(
     public navCtrl: NavController,
     public storage: Storage,
-    private fb: FormBuilder
+    private fb: FormBuilder,
   ) {
     this.initForm();
     this.storage.get('escuelas').then((data) => {
