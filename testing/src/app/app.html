@@ -1,8 +1,38 @@
-<div *ngIf="showSplash" class="splash">
-    <div class="spinner">
-        <div class="double-bounce1"></div>
-        <div class="double-bounce2"></div>
-    </div>
-</div>
+
+
+  <ion-menu [content]="content">
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-title>Menú</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list>
+      <ion-item-divider>Seleccionar escuela:</ion-item-divider>
+      <ion-item>
+        <ion-label>Unidad académica</ion-label>
+        <ion-select>
+          <ion-option>UPIICSA</ion-option>
+          <ion-option>ESCOM</ion-option>
+          <ion-option>UPIITA</ion-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item-divider>Seleccionar carrera:</ion-item-divider>
+        <ion-item>
+      <ion-label>Programa académico</ion-label>
+      <ion-select>
+        <ion-option value="">Licenciatura en ciencias de la informática</ion-option>
+      </ion-select>
+    </ion-item>
+
+    </ion-list>
+    <button ion-button color="secondary">Buscar</button>
+  </ion-content>
+
+
+  </ion-menu>
+
 
 <ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
