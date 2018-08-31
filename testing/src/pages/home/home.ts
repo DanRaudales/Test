@@ -21,11 +21,8 @@ export class HomePage {
   constructor(
     public navCtrl: NavController,
     public storage: Storage,
+    public menuCtrl: MenuController,
     private fb: FormBuilder,
-<<<<<<< HEAD
-=======
-    private menuCtrl: MenuController
->>>>>>> 74349d9f6be96fc9a13fe72301cb7d76e6e343f2
   ) {
     this.initForm();
     this.storage.get('escuelas').then((data) => {
