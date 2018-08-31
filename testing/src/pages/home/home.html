@@ -1,41 +1,19 @@
 <ion-header>
 
   <ion-navbar color="primary" class="z-depth">
-    <ion-buttons left>
-      <button ion-button *ngIf="!searchbar" (click)="searchbar=true">
-        <ion-icon name="search"></ion-icon>
+    <ion-buttons>
+      <button ion-button icon-only (click)="abrirMenu()">
+        <ion-icon name="menu"></ion-icon>
       </button>
     </ion-buttons>
-    <form [formGroup]="stateForm">
-        <ion-searchbar 
-        *ngIf="searchbar" 
-        formControlName="search"
-        [showCancelButton]="shouldShowCancel"
-        [autocomplete]="true"
-        (press)="searchbar=false"
-        [animated]="true"
-        (ionCancel)="searchbar = false" 
-        (ionClear)="searchbar = false" 
-        placeholder="Nombre de la escuela"
-        >
-      </ion-searchbar>
-    </form>
-    
-    <ion-title *ngIf="!searchbar">
-      Escuelas del Instituto Politécnico Nacional
-    </ion-title>
   </ion-navbar>
+
 </ion-header>
-  <div class="dropdown z-depth" *ngIf="searchbar">
-    <ion-list>
-      <button ion-item *ngFor="let fav of favorites | searchFilter: getSearchValue()" class="item-search">
-          {{ fav }}
-      </button>  
-  </ion-list>
-  </div>
+
+
+
 <ion-content [attr.noScroll]="shouldScroll">
   <ion-tabs>
-    <ion-tab class="z-depth" [root]="home" tabTitle="Inicio" tabIcon="home"></ion-tab>
-    <ion-tab  class="z-depth" [root]="favs" tabTitle="Favoritos" tabIcon="star"></ion-tab>
-  </ion-tabs>  
+    <ion-tab class="z-depth" [root]="home"></ion-tab>
+  </ion-tabs>
 </ion-content>

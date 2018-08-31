@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, IonicPage, MenuController } from 'ionic-angular';
 import { MapPage } from '../map/map';
 import { FavoritesPage } from '../favorites/favorites';
 import { Storage } from '@ionic/storage';
@@ -21,7 +21,8 @@ export class HomePage {
   constructor(
     public navCtrl: NavController,
     public storage: Storage,
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private menuCtrl: MenuController
   ) {
     this.initForm();
     this.storage.get('escuelas').then((data) => {
@@ -46,6 +47,10 @@ export class HomePage {
 
   getSearchValue(){
     return this.stateForm.value.search;
+  }
+
+  abrirMenu(){
+    this.menuCtrl.toggle();
   }
 
 }
