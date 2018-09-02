@@ -1,0 +1,1166 @@
+{
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10044,
+          42.373695
+        ]
+      },
+      "properties": {
+        "f1": 1,
+        "f2": "1369 Coffee House"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10543,
+          42.366432
+        ]
+      },
+      "properties": {
+        "f1": 2,
+        "f2": "1369 Coffee House"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.081924,
+          42.36437
+        ]
+      },
+      "properties": {
+        "f1": 3,
+        "f2": "Aceituna Cafe"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.11834,
+          42.373238
+        ]
+      },
+      "properties": {
+        "f1": 4,
+        "f2": "Al's Deli Cafe-Cambridge"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.12138,
+          42.37384
+        ]
+      },
+      "properties": {
+        "f1": 5,
+        "f2": "Algiers Coffee House"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.091286,
+          42.36342
+        ]
+      },
+      "properties": {
+        "f1": 6,
+        "f2": "Area Four"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.08602,
+          42.36341
+        ]
+      },
+      "properties": {
+        "f1": 7,
+        "f2": "B & B Snack Bar"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.14083,
+          42.387756
+        ]
+      },
+      "properties": {
+        "f1": 8,
+        "f2": "Basha Cafe"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.090858,
+          42.366606
+        ]
+      },
+      "properties": {
+        "f1": 9,
+        "f2": "Beantowne Coffee House"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.12067,
+          42.37198
+        ]
+      },
+      "properties": {
+        "f1": 10,
+        "f2": "Boston Tea Stop"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.11313,
+          42.374096
+        ]
+      },
+      "properties": {
+        "f1": 11,
+        "f2": "Broadway Marketplace LLC"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.12708,
+          42.39454
+        ]
+      },
+      "properties": {
+        "f1": 12,
+        "f2": "Cafe Avec"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.1157,
+          42.371605
+        ]
+      },
+      "properties": {
+        "f1": 13,
+        "f2": "Cafe Pamplona"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.11851,
+          42.38885
+        ]
+      },
+      "properties": {
+        "f1": 14,
+        "f2": "Cafe Zing"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.09102,
+          42.37246
+        ]
+      },
+      "properties": {
+        "f1": 15,
+        "f2": "Cambridge Coffee Shop"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.099236,
+          42.36276
+        ]
+      },
+      "properties": {
+        "f1": 16,
+        "f2": "Central Brew Cafe & Espresso"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.12187,
+          42.375237
+        ]
+      },
+      "properties": {
+        "f1": 17,
+        "f2": "Conroy Commons"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.121185,
+          42.37364
+        ]
+      },
+      "properties": {
+        "f1": 18,
+        "f2": "Crema Cafe"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.11014,
+          42.36896
+        ]
+      },
+      "properties": {
+        "f1": 19,
+        "f2": "Dado Tea"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.12072,
+          42.374268
+        ]
+      },
+      "properties": {
+        "f1": 20,
+        "f2": "Dado Tea 50 Church Street"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.124954,
+          42.37409
+        ]
+      },
+      "properties": {
+        "f1": 21,
+        "f2": "Darwin's Limited"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.1095,
+          42.374847
+        ]
+      },
+      "properties": {
+        "f1": 22,
+        "f2": "Darwin's Limited"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.08831,
+          42.36659
+        ]
+      },
+      "properties": {
+        "f1": 23,
+        "f2": "Discovery Cafe"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.08262,
+          42.362
+        ]
+      },
+      "properties": {
+        "f1": 24,
+        "f2": "Dunkin' Donuts"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.11892,
+          42.38863
+        ]
+      },
+      "properties": {
+        "f1": 25,
+        "f2": "Dunkin' Donuts"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.076715,
+          42.36858
+        ]
+      },
+      "properties": {
+        "f1": 26,
+        "f2": "Dunkin' Donuts"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.093704,
+          42.372818
+        ]
+      },
+      "properties": {
+        "f1": 27,
+        "f2": "Dunkin' Donuts"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.11141,
+          42.369423
+        ]
+      },
+      "properties": {
+        "f1": 28,
+        "f2": "Dunkin' Donuts"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.14297,
+          42.389206
+        ]
+      },
+      "properties": {
+        "f1": 29,
+        "f2": "Dunkin' Donuts"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.094,
+          42.36653
+        ]
+      },
+      "properties": {
+        "f1": 30,
+        "f2": "Dunkin' Donuts"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.13211,
+          42.398865
+        ]
+      },
+      "properties": {
+        "f1": 31,
+        "f2": "Dunkin' Donuts"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.07953,
+          42.37242
+        ]
+      },
+      "properties": {
+        "f1": 32,
+        "f2": "Dunkin' Donuts"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.14183,
+          42.39465
+        ]
+      },
+      "properties": {
+        "f1": 33,
+        "f2": "Dunkin' Donuts"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.1415,
+          42.387127
+        ]
+      },
+      "properties": {
+        "f1": 34,
+        "f2": "Dunkin' Donuts"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.12106,
+          42.37413
+        ]
+      },
+      "properties": {
+        "f1": 35,
+        "f2": "Dunkin' Donuts"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10325,
+          42.365105
+        ]
+      },
+      "properties": {
+        "f1": 36,
+        "f2": "Dunkin' Donuts"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.12099,
+          42.371624
+        ]
+      },
+      "properties": {
+        "f1": 37,
+        "f2": "Dunkin' Donuts"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.11589,
+          42.36088
+        ]
+      },
+      "properties": {
+        "f1": 38,
+        "f2": "Dunkin' Donuts"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0942,
+          42.359676
+        ]
+      },
+      "properties": {
+        "f1": 39,
+        "f2": "Dunkin' Donuts"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.12099,
+          42.371624
+        ]
+      },
+      "properties": {
+        "f1": 40,
+        "f2": "Dunkin' Donuts"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10432,
+          42.370617
+        ]
+      },
+      "properties": {
+        "f1": 41,
+        "f2": "Dwell Time"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.093605,
+          42.366386
+        ]
+      },
+      "properties": {
+        "f1": 42,
+        "f2": "Expresso Cafe"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.13474,
+          42.402267
+        ]
+      },
+      "properties": {
+        "f1": 43,
+        "f2": "Fort Point Tea Co"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.114914,
+          42.37314
+        ]
+      },
+      "properties": {
+        "f1": 44,
+        "f2": "Harvard Dining Svc"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.14265,
+          42.38961
+        ]
+      },
+      "properties": {
+        "f1": 45,
+        "f2": "Hub Donuts Inc"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.1415,
+          42.387127
+        ]
+      },
+      "properties": {
+        "f1": 46,
+        "f2": "Hub Donuts Inc"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.093605,
+          42.366386
+        ]
+      },
+      "properties": {
+        "f1": 47,
+        "f2": "Kendall Kitchen"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10064,
+          42.36359
+        ]
+      },
+      "properties": {
+        "f1": 48,
+        "f2": "LA Luna Caffe"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10082,
+          42.363686
+        ]
+      },
+      "properties": {
+        "f1": 49,
+        "f2": "Mariposa Bakery"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.07228,
+          42.36886
+        ]
+      },
+      "properties": {
+        "f1": 50,
+        "f2": "Museum Market"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.088774,
+          42.362997
+        ]
+      },
+      "properties": {
+        "f1": 51,
+        "f2": "Sebastians"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.097305,
+          42.361603
+        ]
+      },
+      "properties": {
+        "f1": 52,
+        "f2": "Darwin's Limited"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.120735,
+          42.3728
+        ]
+      },
+      "properties": {
+        "f1": 53,
+        "f2": "Peet's Coffee & Tea"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.08598,
+          42.366653
+        ]
+      },
+      "properties": {
+        "f1": 54,
+        "f2": "Plaza Catering"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.11726,
+          42.371063
+        ]
+      },
+      "properties": {
+        "f1": 55,
+        "f2": "Qafe"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0835,
+          42.371494
+        ]
+      },
+      "properties": {
+        "f1": 56,
+        "f2": "R J Gourmet"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.110695,
+          42.369167
+        ]
+      },
+      "properties": {
+        "f1": 57,
+        "f2": "Simon's Too"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.13006,
+          42.397156
+        ]
+      },
+      "properties": {
+        "f1": 58,
+        "f2": "Singa Bella Cafe"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.076121,
+          42.367463
+        ]
+      },
+      "properties": {
+        "f1": 59,
+        "f2": "Starbucks"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10289,
+          42.36617
+        ]
+      },
+      "properties": {
+        "f1": 60,
+        "f2": "Starbucks"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.118866,
+          42.373714
+        ]
+      },
+      "properties": {
+        "f1": 61,
+        "f2": "Starbucks"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.087937,
+          42.363893
+        ]
+      },
+      "properties": {
+        "f1": 62,
+        "f2": "Starbucks"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.14286,
+          42.38805
+        ]
+      },
+      "properties": {
+        "f1": 63,
+        "f2": "Starbucks"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.12038,
+          42.374393
+        ]
+      },
+      "properties": {
+        "f1": 64,
+        "f2": "Starbucks"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.11998,
+          42.37278
+        ]
+      },
+      "properties": {
+        "f1": 65,
+        "f2": "Starbucks"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.11313,
+          42.374096
+        ]
+      },
+      "properties": {
+        "f1": 66,
+        "f2": "Starbucks"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.08598,
+          42.3629
+        ]
+      },
+      "properties": {
+        "f1": 67,
+        "f2": "Starbucks"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10389,
+          42.36553
+        ]
+      },
+      "properties": {
+        "f1": 68,
+        "f2": "Starbucks"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.120053,
+          42.381899
+        ]
+      },
+      "properties": {
+        "f1": 80,
+        "f2": "Starbucks"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.115295,
+          42.35772
+        ]
+      },
+      "properties": {
+        "f1": 69,
+        "f2": "Starbucks"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.09108,
+          42.372467
+        ]
+      },
+      "properties": {
+        "f1": 70,
+        "f2": "Sunset Cafe Inc"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.080154,
+          42.371063
+        ]
+      },
+      "properties": {
+        "f1": 71,
+        "f2": "Sweet Touch Cafe"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.08952,
+          42.372257
+        ]
+      },
+      "properties": {
+        "f1": 72,
+        "f2": "Tasin & Coffee Express"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.120834,
+          42.373253
+        ]
+      },
+      "properties": {
+        "f1": 73,
+        "f2": "Tealuxe"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0766,
+          42.367104
+        ]
+      },
+      "properties": {
+        "f1": 74,
+        "f2": "Teavana"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.11955,
+          42.384068
+        ]
+      },
+      "properties": {
+        "f1": 75,
+        "f2": "Tisan Coffee Express"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.08952,
+          42.372257
+        ]
+      },
+      "properties": {
+        "f1": 76,
+        "f2": "Tisan Coffee Express"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.128845,
+          42.39609
+        ]
+      },
+      "properties": {
+        "f1": 77,
+        "f2": "Verna's Donut Shop"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.08267,
+          42.36528
+        ]
+      },
+      "properties": {
+        "f1": 78,
+        "f2": "Voltage Coffee & Art"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.08914,
+          42.372208
+        ]
+      },
+      "properties": {
+        "f1": 79,
+        "f2": "Wu Healing Ctr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.119738,
+          42.384598
+        ]
+      },
+      "properties": {
+        "f1": 81,
+        "f2": "Simon's Coffee Shop"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.148877,
+          42.375159
+        ]
+      },
+      "properties": {
+        "f1": 82,
+        "f2": "Starbucks"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.118901,
+          42.3873
+        ]
+      },
+      "properties": {
+        "f1": 83,
+        "f2": "Bourbon Coffee"
+      }
+    }
+  ]
+}

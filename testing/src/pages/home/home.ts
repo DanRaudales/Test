@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
-import { NavController, IonicPage, MenuController } from 'ionic-angular';
-import { MapPage } from '../map/map';
-import { FavoritesPage } from '../favorites/favorites';
-import { Storage } from '@ionic/storage';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { NavController, MenuController, ModalController } from 'ionic-angular';
+import { DetailsPage } from '../details/details';
+import { HttpClient } from '@angular/common/http';
+import * as Leaflet from 'leaflet';
 
 @Component({
   selector: 'page-home',
@@ -11,46 +10,47 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 })
 export class HomePage {
 
-  home = MapPage;
-  favs = FavoritesPage;
+  map: any;
 
   favorites: any;
-  stateForm: FormGroup;
-  serachbar = false;
+
+  cafeterias: any;
 
   constructor(
     public navCtrl: NavController,
-    public storage: Storage,
     public menuCtrl: MenuController,
-    private fb: FormBuilder,
-  ) {
-    this.initForm();
-    this.storage.get('escuelas').then((data) => {
-      if (data == null){
-        this.storage.set('escuelas', []);
-      }
-      else {
-        this.favorites = data;
-      }
-    });
+    public modalCtrl: ModalController,
+    public http: HttpClient
+  ) {    
+    
   }
 
-  initForm(): FormGroup {
-    return this.stateForm = this.fb.group({
-      search: [null]
+  ionViewDidLoad(){
+    this.http.get('assets/data/cafeterias.json').subscribe(res =>{
+      this.cafeterias = res;
+
+      this.map = Leaflet.map('map').setView([42.367386, -71.093605], 14);
+        Leaflet.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {   
+        maxZoom: 18  
+      }).addTo(this.map);
+
+      this.cafeterias.features.forEach(kfe => {
+        console.log(kfe)
+        Leaflet.marker([kfe.geometry.coordinates[1],kfe.geometry.coordinates[0]]).bindPopup(kfe.properties.f2).on('contextmenu', () => {
+          this.details(kfe.properties.f2);
+        }).addTo(this.map);
+      });
+
     })
-  }
 
-  selectValue(value){
-    this.stateForm.patchValue({"search": value});
-  }
-
-  getSearchValue(){
-    return this.stateForm.value.search;
   }
 
   abrirMenu(){
     this.menuCtrl.toggle();
   }
+
+  details(a) {
+    this.navCtrl.push(DetailsPage, { escuela: a});
+  }  
 
 }

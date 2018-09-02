@@ -1,41 +1,10 @@
 page-home {
-    #a {
-        text-align: center;
-    }
-    .dropdown {
-        background: #843742;
-        margin-left: 3%;
-        width: 95%;
-        height: auto;
-        max-height: 200px;
-        z-index: 11;
-        position: absolute;
-        margin-top: 51px;
-        overflow-y: auto;
-    }
-    ion-list {
-        margin: 0px !important;
-        padding: 10px;
-    }
-    ion-navbar {
-        height: 52px !important;
-    }
-    ion-title{
-        text-align: center;
-    }
-    .item-search {
-        background: #843742;
-        color: #c0999e;
-        text-align: center;
-    }
-    .tabbar {
-        background: #843742 !important;
+    #map {
+        height: 100%;
+        width: 100%;
     }
     [noScroll] {
         overflow: hidden;
-    }
-    .toolbar-ios ion-title{
-        padding: 0px;
     }
     .z-depth {
         -webkit-box-shadow:0 4px 5px 0 rgba(0,0,0,0.14),0 1px 10px 0 rgba(0,0,0,0.12),0 2px 4px -1px rgba(0,0,0,0.3);
