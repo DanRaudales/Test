@@ -1,2 +1,2 @@
 # Test
-Riley Reid
+Prototipo de aplicación Ionic
