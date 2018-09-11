@@ -29,6 +29,14 @@
 
     </ion-list>
     <button ion-button color="secondary">Buscar</button>
+
+    <ion-list>
+      <ion-item-divider>Favoritos</ion-item-divider>
+      <button ion-item *ngFor="let favorito of favoritos" icon-end (click)="abrirFavorito(favorito)">
+        {{favorito}}
+        <ion-icon name="arrow-forward"></ion-icon>
+      </button>
+    </ion-list>
   </ion-content>
 
 

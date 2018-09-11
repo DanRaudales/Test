@@ -15,12 +15,12 @@ export class FavoritesPage {
   users: any[] = [];
 
   constructor(
-    public navCtrl: NavController, 
+    public navCtrl: NavController,
     public modalCtrl: ModalController,
     public storage: Storage,
     private api: ApiServiceProvider
   ) {
-    this.storage.get('escuelas').then((val) => {
+    this.storage.get('fav').then((val) => {
       this.schools = val;
     });
   }
@@ -33,7 +33,7 @@ export class FavoritesPage {
     });
   }
 
-  details(a){    
+  details(a){
     let modal = this.modalCtrl.create(DetailsPage, { escuela: a, star: true });
     modal.present();
   }

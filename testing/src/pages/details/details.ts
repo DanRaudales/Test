@@ -14,11 +14,11 @@ export class DetailsPage {
   star: any;
 
   constructor(
-    public navCtrl: NavController, 
+    public navCtrl: NavController,
     public storage: Storage,
     public navParams: NavParams
   ) {
-    this.school = navParams.get('escuela');
+    this.school = navParams.get('dato');
     this.star = navParams.get('star');
     if (this.star){
       this.iconClass = 'icon-star'
@@ -27,7 +27,7 @@ export class DetailsPage {
       this.iconClass = 'icon-default';
     }
   }
-  
+
   back(){
     this.navCtrl.pop();
   }

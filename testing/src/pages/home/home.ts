@@ -28,13 +28,14 @@ export class HomePage {
 
   streets: any;
 
+
   constructor(
     public navCtrl: NavController,
     public menuCtrl: MenuController,
     public modalCtrl: ModalController,
     public http: HttpClient
-  ) {    
-    
+  ) {
+
   }
 
   ionViewDidLoad(){
@@ -54,7 +55,7 @@ export class HomePage {
         center: [42.367386, -71.093605],
         zoom: 14,
         maxZoom: 18,
-        layers: [this.streets] 
+        layers: [this.streets]
       });
 
       this.baseLayers = {
@@ -66,12 +67,12 @@ export class HomePage {
 
       this.customControl = Leaflet.Control.extend({
         options: {
-          position: 'topleft' 
+          position: 'topleft'
         },
-       
+
         onAdd: function (map) {
           this.container = Leaflet.DomUtil.create('div', 'leaflet-bar leaflet-control leaflet-control-custom');
-  
+
           this.container.style.backgroundColor = 'white';
           this.container.style.backgroundImage = "url(assets/imgs/home-13.png)";
           this.container.style.backgroundRepeat = 'no-repeat';
@@ -79,14 +80,14 @@ export class HomePage {
           this.container.style.backgroundSize = "25px 25px";
           this. container.style.width = '34px';
           this.container.style.height = '34px';
-       
+
           this.container.onclick = function(){
             map.setView([42.367386, -71.093605], 14);
           }
           return this.container;
         },
       });
-  
+
       this.map.addControl(new this.customControl());
 
       this.cafeterias.features.forEach(kfe => {
@@ -97,8 +98,8 @@ export class HomePage {
       });
 
     })
-    
-    
+
+
 
   }
 
@@ -108,6 +109,6 @@ export class HomePage {
 
   details(a) {
     this.navCtrl.push(DetailsPage, { escuela: a});
-  }  
+  }
 
 }
