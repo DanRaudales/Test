@@ -32,9 +32,8 @@
 
     <ion-list>
       <ion-item-divider>Favoritos</ion-item-divider>
-      <button ion-item *ngFor="let favorito of favoritos" icon-end (click)="abrirFavorito(favorito)">
-        {{favorito}}
-        <ion-icon name="arrow-forward"></ion-icon>
+      <button ion-item *ngFor="let favorito of favoritos" (click)="abrirFavorito(favorito)" detail-push>
+        {{favorito.Nombre}}
       </button>
     </ion-list>
   </ion-content>
