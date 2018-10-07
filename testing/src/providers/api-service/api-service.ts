@@ -12,7 +12,7 @@ export class ApiServiceProvider {
   cafeterias: any;
 
   getData() {
-    return this.http.get('assets/data/cafeterias.json');
+    return this.http.get('http://192.168.43.124:3000/lugares');
     
   }
   

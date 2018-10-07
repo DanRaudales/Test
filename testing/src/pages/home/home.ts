@@ -39,7 +39,8 @@ export class HomePage {
   }
 
   ionViewDidLoad(){
-    this.http.get('assets/data/cafeterias.json').subscribe(res =>{
+    
+    this.http.get('http://192.168.43.124:3000/lugares').subscribe(res =>{
       this.cafeterias = res;
 
       this.mbAttr = 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
@@ -52,8 +53,8 @@ export class HomePage {
 	  	this.streets  = Leaflet.tileLayer(this.mbUrl, {id: 'mapbox.streets'});
 
       this.map = Leaflet.map('map', {
-        center: [42.367386, -71.093605],
-        zoom: 14,
+        center: [19.395893, -99.092330],
+        zoom: 12,
         maxZoom: 18,
         layers: [this.streets]
       });
@@ -82,7 +83,7 @@ export class HomePage {
           this.container.style.height = '34px';
 
           this.container.onclick = function(){
-            map.setView([42.367386, -71.093605], 14);
+            map.setView([19.395893, -99.092330], 12);
           }
           return this.container;
         },
@@ -92,8 +93,8 @@ export class HomePage {
 
       this.cafeterias.features.forEach(kfe => {
         console.log(kfe)
-        Leaflet.marker([kfe.geometry.coordinates[1],kfe.geometry.coordinates[0]]).bindPopup(kfe.properties.f2).on('contextmenu', () => {
-          this.details(kfe.properties.f2);
+        Leaflet.marker([kfe.COORDENADAS.lat,kfe.COORDENADAS.lng]).bindPopup(kfe.NOM_CORTO_PRESTATARIO).on('contextmenu', () => {
+          this.details(kfe.NOM_CORTO_PRESTATARIO);
         }).addTo(this.map);
       });
 
