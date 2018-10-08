@@ -9,7 +9,7 @@ export class ApiServiceProvider {
     
   }
 
-  cafeterias: any;
+  places: any;
 
   getData() {
     return this.http.get('http://192.168.43.124:3000/lugares');

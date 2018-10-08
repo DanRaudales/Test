@@ -14,7 +14,7 @@ export class HomePage {
 
   favorites: any;
 
-  cafeterias: any;
+  places: any;
 
   baseLayers: any;
 
@@ -28,6 +28,8 @@ export class HomePage {
 
   streets: any;
 
+  coo: any;
+
 
   constructor(
     public navCtrl: NavController,
@@ -39,9 +41,10 @@ export class HomePage {
   }
 
   ionViewDidLoad(){
-    
-    this.http.get('http://192.168.43.124:3000/lugares').subscribe(res =>{
-      this.cafeterias = res;
+
+    this.http.get('http://192.168.70.143:3000/lugares').subscribe(res =>{
+      this.places = res;
+  
 
       this.mbAttr = 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
     '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
@@ -91,10 +94,13 @@ export class HomePage {
 
       this.map.addControl(new this.customControl());
 
-      this.cafeterias.features.forEach(kfe => {
-        console.log(kfe)
-        Leaflet.marker([kfe.COORDENADAS.lat,kfe.COORDENADAS.lng]).bindPopup(kfe.NOM_CORTO_PRESTATARIO).on('contextmenu', () => {
-          this.details(kfe.NOM_CORTO_PRESTATARIO);
+      this.places.forEach(ss => {
+        //console.log(ss)
+        //this.coo = Leaflet.polygon([ss.COORDENADAS.lat,ss.COORDENADAS.lng])
+        let coor:any[] = [ss.COORDENADAS.lat,ss.COORDENADAS.lng];
+        console.log(coor);
+        Leaflet.marker([coor[0],coor[1]]).bindPopup(ss.NOM_CORTO_PRESTATARIO).on('contextmenu', () => {
+          this.details(ss.NOM_CORTO_PRESTATARIO);
         }).addTo(this.map);
       });
 
