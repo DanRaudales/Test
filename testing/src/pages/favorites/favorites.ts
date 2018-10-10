@@ -11,7 +11,7 @@ import { HomePage } from '../home/home';
   templateUrl: 'favorites.html',
 })
 export class FavoritesPage {
-  root:any = HomePage;
+
   arrayFavoritos:any={};
 
   constructor(

@@ -42,10 +42,9 @@ export class HomePage {
 
   ionViewDidLoad(){
 
-    this.http.get('http://192.168.70.143:3000/lugares').subscribe(res =>{
+    this.http.get('http://192.168.0.8:3000/api/lugares').subscribe((res) =>{
       this.places = res;
-  
-
+      console.log(res);
       this.mbAttr = 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
     '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
     'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>';
@@ -98,13 +97,13 @@ export class HomePage {
         //console.log(ss)
         //this.coo = Leaflet.polygon([ss.COORDENADAS.lat,ss.COORDENADAS.lng])
         let coor:any[] = [ss.COORDENADAS.lat,ss.COORDENADAS.lng];
-        console.log(coor);
+        //console.log(coor);
         Leaflet.marker([coor[0],coor[1]]).bindPopup(ss.NOM_CORTO_PRESTATARIO).on('contextmenu', () => {
-          this.details(ss.NOM_CORTO_PRESTATARIO);
+          this.details(ss);
         }).addTo(this.map);
       });
 
-    })
+    },(error)=>{console.log(error)})
 
 
 

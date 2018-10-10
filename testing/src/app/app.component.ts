@@ -16,7 +16,7 @@ export class MyApp {
   favorito:any = FavoritesPage;
 
   favoritos: any[] = [
-    /*{Nombre:"4tools Power Systems",
+    {Nombre:"4tools Power Systems",
       Direccion:"666"},
     {Nombre:"C-Estrategia",
       Direccion:"El Inge"},
@@ -35,7 +35,7 @@ export class MyApp {
     {Nombre:"7 ELEVEN",
       Direccion:"Estacion Iztacalco"},
     {Nombre:"Otro",
-  Direccion:"666"}*/];
+  Direccion:"666"}];
 
   showSplash = true;
 
@@ -52,6 +52,10 @@ export class MyApp {
 
   abrirFavorito(fav: any){
     this.nav.push(this.favorito,{'fav':fav});
+    this.menuCtrl.close();
+  }
+
+  buscar(carrera: String){
     this.menuCtrl.close();
   }
 }
