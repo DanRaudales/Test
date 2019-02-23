@@ -207,7 +207,7 @@ export class MapPage {
           this.container.style.backgroundRepeat = 'no-repeat';
           this.container.style.backgroundPosition = 'center';
           this.container.style.backgroundSize = "25px 25px";
-          this. container.style.width = '30px';
+          this.container.style.width = '30px';
           this.container.style.height = '30px';
 
           this.container.onclick = function(){

@@ -9,7 +9,8 @@ import { HomePage } from '../pages/home/home';
 import { DetailsPage } from '../pages/details/details';
 import { MapPage } from '../pages/map/map';
 import { FavoritesPage } from '../pages/favorites/favorites';
-import { ActividadPage } from '../pages/actividad/actividad'
+import { ActividadPage } from '../pages/actividad/actividad';
+import { SlidesPage } from '../pages/slides/slides';
 
 import { SearchfilterPipe } from '../pipes/searchfilter/searchfilter';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -26,6 +27,7 @@ import { ApiServiceProvider } from '../providers/api-service/api-service';
     MapPage,
     ActividadPage,
     FavoritesPage,
+    SlidesPage,
     SearchfilterPipe
   ],
   imports: [
@@ -43,7 +45,8 @@ import { ApiServiceProvider } from '../providers/api-service/api-service';
     DetailsPage,
     MapPage,
     ActividadPage,
-    FavoritesPage
+    FavoritesPage,
+    SlidesPage
   ],
   providers: [
     StatusBar,

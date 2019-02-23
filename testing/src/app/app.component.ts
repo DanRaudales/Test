@@ -6,6 +6,9 @@ import { timer } from 'rxjs/observable/timer';
 
 import { FavoritesPage } from '../pages/favorites/favorites';
 import { HomePage } from '../pages/home/home';
+import { SlidesPage } from '../pages/slides/slides';
+
+import { Storage } from '@ionic/storage';
 
 @Component({
   templateUrl: 'app.html'
@@ -38,10 +41,29 @@ export class MyApp {
   Direccion:"666"}];
 
   showSplash = true;
+  slides = true;
 
-  constructor(platform: Platform,statusBar: StatusBar,splashScreen: SplashScreen,
+  constructor(
+    platform: Platform,
+    statusBar: StatusBar,
+    splashScreen: SplashScreen,
+    private storage: Storage,
     private menuCtrl: MenuController) {
     platform.ready().then(() => {
+      let slides = storage.get( 'slider' );
+      slides.then(function(result) {
+        // here you can use the result of promiseB
+        console.log("-----> " + result);
+
+        if(result) {
+          this.rootPage = HomePage; // user can user this.nav.setRoot(TutorialPage);
+        } else{
+          this.rootPage = SlidesPage; // user can user this.nav.setRoot(LoginPage);
+          storage.set('slider', true);
+        }
+
+    });
+      
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
       statusBar.styleDefault();
