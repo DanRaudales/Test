@@ -20,8 +20,10 @@
       <ion-item-divider>Seleccionar carrera:</ion-item-divider>
         <ion-item>
       <ion-label>Programa académico</ion-label>
-      <ion-select>
-        <ion-option value="">Licenciatura en ciencias de la informática</ion-option>
+      <ion-select [(ngModel)]="searchTerm" (ionChange)="setFilteredItems()">
+        <ion-option value="LCI">Lic. Ciencias de la informática</ion-option>
+        <ion-option value="INI">Ing. Informática</ion-option>
+        <ion-option value="LAI">Lic. Administración Industrial</ion-option>
       </ion-select>
     </ion-item>
 
@@ -36,8 +38,6 @@
     </ion-list>
   </ion-content>
 
-
   </ion-menu>
-
-
+  
 <ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

@@ -1,9 +1,5 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, ModalController,NavParams } from 'ionic-angular';
-import { DetailsPage } from '../details/details';
-import { Storage } from '@ionic/storage';
-import { ApiServiceProvider } from '../../providers/api-service/api-service';
-import { HomePage } from '../home/home';
 
 @IonicPage()
 @Component({
@@ -17,8 +13,6 @@ export class FavoritesPage {
   constructor(
     public navCtrl: NavController,
     public modalCtrl: ModalController,
-    public storage: Storage,
-    private api: ApiServiceProvider,
     public navParams: NavParams) {
     /*this.storage.get('fav').then((val) => {
       this.schools = val;

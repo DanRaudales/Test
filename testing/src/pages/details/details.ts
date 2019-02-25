@@ -20,37 +20,44 @@ export class DetailsPage {
     public storage: Storage,
     public navParams: NavParams
   ) {
-    this.ss = navParams.get('escuela');
-    /*this.star = navParams.get('star');
+    this.ss = navParams.get('lugar');
+    this.star = navParams.get('star');
     if (this.star){
       this.iconClass = 'icon-star'
     }
     else {
       this.iconClass = 'icon-default';
-    }*/
+    }
   }
 
+  // Función para regresar a la vista anterior
   back(){
     this.navCtrl.pop();
   }
 
+  // Ir a los detalles del programa
   goPrograma (programa){
     let p = programa;
-    console.log(programa)
     this.navCtrl.push(ActividadPage, { actividad: p })
   }
 
   save(){
-    /*if(this.iconClass == 'icon-default'){
+    if(this.iconClass == 'icon-default'){
       this.iconClass = 'icon-star';
-      this.storage.get('escuelas').then((data) => {
-        data.push(this.school)
-        this.storage.set('escuelas', data);
+      this.storage.get('favoritos').then((data) => {
+        if(data){
+          let array = data
+          array.push(this.ss)
+          this.storage.set('favoritos', array);
+        } else {
+          this.storage.set('favoritos', this.ss);
+        }
+        
       });
     }
     else {
       this.iconClass = 'icon-default';
-    }*/
+    }
   }
 
 }
