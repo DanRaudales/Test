@@ -17,6 +17,7 @@ export class SlidesPage {
   }
 
   goHome (){
+    console.log('Ir a home')
     this.navCtrl.setRoot(HomePage);
     this.navCtrl.popToRoot();
   }

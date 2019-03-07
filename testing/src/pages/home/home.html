@@ -14,8 +14,8 @@
   <ion-fab bottom right>
     <button ion-fab><ion-icon name="cog"></ion-icon></button>
     <ion-fab-list side="top">
-      <button ion-fab (click)="showAlert()"><ion-icon ios="ios-funnel" md="md-funnel"></ion-icon></button>
-      <button ion-fab (click)="alertFavorites()"><ion-icon [name]="iconFavName"></ion-icon></button>
+      <button color="filter" ion-fab (click)="showAlert()"><ion-icon ios="ios-funnel" md="md-funnel"></ion-icon></button>
+      <button color="favorites" ion-fab (click)="alertFavorites()" style="color: white"><ion-icon [name]="iconFavName"></ion-icon></button>
     </ion-fab-list>
   </ion-fab>
 </ion-content>

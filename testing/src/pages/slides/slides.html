@@ -1,16 +1,22 @@
 <ion-content>
 
     <ion-slides>
-        <ion-slide style="background: rgb(233, 30, 99)">
-          <h1>Slide 1</h1>
+        <ion-slide style="background: rgb(30, 100, 233)">
+          <img width="120" height="120" style="margin-top: -80px; width: 150px !important; height: 150px !important;" src="assets/imgs/search-flat.png">
+          <h1 style="color: white">Búsquedas</h1>
+          <p style="color: white; max-width: 320px; display: block; margin: auto;">Podrás realizar búsquedas de acuerdo a tu carrera y la delegación que prefieras</p>
         </ion-slide>
-        <ion-slide style="background: rgb(0, 188, 212)">
-          <h1>Slide 2</h1>
+        <ion-slide style="background: rgb(20, 228, 8)">
+          <img width="120" height="120" style="margin-top: -80px; width: 150px !important; height: 150px !important;" src="assets/imgs/map-flat.png">
+          <h1 style="color: white">Visualizar en el mapa</h1>
+          <p style="color: white; max-width: 320px; display: block; margin: auto;">Verás los lugares que cumplen con los criterios de búsqueda que desees</p>
         </ion-slide>
         <ion-slide style="background: rgb(233, 30, 99)">
-          <h1>Slide 3</h1>
+          <img width="120" height="120" style="margin-top: -80px; width: 150px !important; height: 150px !important;" src="assets/imgs/star-circle.png">
+          <h1 style="color: white">Guardar favoritos</h1>
+          <p style="color: white; max-width: 320px; display: block; margin: auto;">Tendrás la posibilidad guardar tus lugares favoritos</p>
           <br>
-          <button ion-button style="background: rgb(0, 188, 212)" ng-click="goHome()">
+          <button ion-button color="light" (click)="goHome()">
             Continuar
           </button>
         </ion-slide>

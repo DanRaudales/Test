@@ -54,7 +54,7 @@ export class HomePage {
           }))
         });
       }
-    });
+    }); 
   }
 
   alertFavorites() {
@@ -260,7 +260,7 @@ export class HomePage {
     places.forEach(ss => {
       let coor: any[] = [ss.COORDENADAS.lat, ss.COORDENADAS.lng]; // Crear un array con las coordenadas del lugar
       // Añadir el lugar al array de los marcadores
-      this.markers.push(Leaflet.marker([coor[0], coor[1]]).bindPopup('<a href="https://www.google.com" target="_blank">' + ss.NOM_CORTO_PRESTATARIO + '</a>').on('contextmenu', () => {
+      this.markers.push(Leaflet.marker([coor[0], coor[1]]).bindPopup('<a href="https://serviciosocial.ipn.mx/" target="_blank">' + ss.NOM_CORTO_PRESTATARIO + '</a>').on('contextmenu', () => {
         this.details(ss);
       }))
     });

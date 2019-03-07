@@ -6,6 +6,7 @@ import { timer } from 'rxjs/observable/timer';
 import { Storage } from '@ionic/storage';
 import { DetailsPage } from '../pages/details/details';
 import { HomePage } from '../pages/home/home';
+import { SlidesPage } from '../pages/slides/slides'
 import { ApiServiceProvider } from '../providers/api-service/api-service'
 
 @Component({
@@ -13,51 +14,9 @@ import { ApiServiceProvider } from '../providers/api-service/api-service'
 })
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
-  rootPage: any = HomePage;
+  rootPage: any = SlidesPage;
   searchTerm: any;
   favoritos = [];
-
-  /*favoritos: any[] = [
-    {
-      Nombre: "4tools Power Systems",
-      Direccion: "666"
-    },
-    {
-      Nombre: "C-Estrategia",
-      Direccion: "El Inge"
-    },
-    {
-      Nombre: "SITAH",
-      Direccion: "666"
-    },
-    {
-      Nombre: "PTREE",
-      Direccion: "Dr. Nick ;)"
-    },
-    {
-      Nombre: "PRO PHARMA RESEARCH",
-      Direccion: "666"
-    },
-    {
-      Nombre: "EL REFORMA",
-      Direccion: "Universidad"
-    },
-    {
-      Nombre: "IFT",
-      Direccion: "666"
-    },
-    {
-      Nombre: "OXXO",
-      Direccion: "Estación UPIICSA"
-    },
-    {
-      Nombre: "7 ELEVEN",
-      Direccion: "Estacion Iztacalco"
-    },
-    {
-      Nombre: "Otro",
-      Direccion: "666"
-    }];*/
 
   showSplash = true;
   slides = true;
