@@ -47,14 +47,14 @@ export class HomePage {
         this.favoritos = data;
         // Iterar en cada lugar que se recibe
         this.favoritos.forEach(ss => {
-          let coor: any[] = [ss.COORDENADAS.lat, ss.COORDENADAS.lng]; // Crear un array con las coordenadas del lugar
+          let coor: any[] = [ss.DIRECCION.COORDENADAS.lat, ss.DIRECCION.COORDENADAS.lng]; // Crear un array con las coordenadas del lugar
           // Añadir el lugar al array de los marcadores
           this.markerFavorites.push(Leaflet.marker([coor[0], coor[1]]).bindPopup(ss.NOM_CORTO_PRESTATARIO).on('contextmenu', () => {
             this.details(ss);
           }))
         });
       }
-    }); 
+    });
   }
 
   alertFavorites() {
@@ -83,7 +83,7 @@ export class HomePage {
             for (let i = 0; i < this.markers.length; i++) {
               this.map.removeLayer(this.markers[i]) // Remover los marcadores del layer del mapa
             }
-            this.markers = []; // Limpiar el array de los marcadores 
+            this.markers = []; // Limpiar el array de los marcadores
             this.markers = this.backupMarkers; // Asignar los marcadores al array
             this.backupMarkers = [] // Vaciar el backup de los marcadores
             this.markerGroup = Leaflet.layerGroup(this.markers) // Crear un layerGroup para el mapa
@@ -120,7 +120,7 @@ export class HomePage {
             for (let i = 0; i < this.markers.length; i++) {
               this.map.removeLayer(this.markers[i]) // Remover los marcadores del layer del mapa
             }
-            this.markers = []; // Limpiar el array de los marcadores 
+            this.markers = []; // Limpiar el array de los marcadores
             this.showMarkers(this.favoritos); // Generar el nuevo array de los marcadores
             this.markerGroup = Leaflet.layerGroup(this.markers) // Crear un layerGroup para el mapa
             this.map.addLayer(this.markerGroup) // Añadir el nuevo layer al mapa
@@ -149,7 +149,7 @@ export class HomePage {
     alert.addInput({
       type: 'radio',
       label: 'Lic. Ciencias de la Informática',
-      value: 'LCI',
+      value: 'Licenciatura en Ciencias de la Informática',
       checked: true
     });
 
@@ -157,15 +157,22 @@ export class HomePage {
     alert.addInput({
       type: 'radio',
       label: 'Ing. Informática',
-      value: 'INI',
+      value: 'Ingeniería en Informática',
       checked: false
     });
 
     // Agregar opción de selección LAI
     alert.addInput({
       type: 'radio',
-      label: 'Lic. Administración Industrial',
-      value: 'LAI',
+      label: 'Ing. en Transporte',
+      value: 'Ingeniería en Transporte',
+      checked: false
+    });
+
+    alert.addInput({
+      type: 'radio',
+      label: 'Ing. Industrial',
+      value: 'Ingeniería Industrial',
       checked: false
     });
 
@@ -183,7 +190,7 @@ export class HomePage {
         for (let i = 0; i < this.markers.length; i++) {
           this.map.removeLayer(this.markers[i]) // Remover los marcadores del layer del mapa
         }
-        this.markers = []; // Limpiar el array de los marcadores 
+        this.markers = []; // Limpiar el array de los marcadores
         this.showMarkers(newPlaces); // Generar el nuevo array de los marcadores
         this.markerGroup = Leaflet.layerGroup(this.markers) // Crear un layerGroup para el mapa
         this.map.addLayer(this.markerGroup) // Añadir el nuevo layer al mapa
@@ -258,9 +265,13 @@ export class HomePage {
   showMarkers(places) {
     // Iterar en cada lugar que se recibe
     places.forEach(ss => {
-      let coor: any[] = [ss.COORDENADAS.lat, ss.COORDENADAS.lng]; // Crear un array con las coordenadas del lugar
+      let coor: any[] = [ss.DIRECCION.COORDENADAS.lat, ss.DIRECCION.COORDENADAS.lng]; // Crear un array con las coordenadas del lugar
       // Añadir el lugar al array de los marcadores
-      this.markers.push(Leaflet.marker([coor[0], coor[1]]).bindPopup('<a href="https://serviciosocial.ipn.mx/" target="_blank">' + ss.NOM_CORTO_PRESTATARIO + '</a>').on('contextmenu', () => {
+      let servicio = 'Servicio Social'
+      this.markers.push(Leaflet.marker([coor[0], coor[1]]).bindPopup(
+                                                                        '<p>'+ss.NOM_CORTO_PRESTATARIO+'</p>'+
+                                                                        '<p>'+ss.DIRECCION.CALLE+' Num.'+ss.DIRECCION.NUM_EXT+'</p>'+
+                                                                      '<a href="https://serviciosocial.ipn.mx/" target="_blank">' + servicio + '</a>').on('contextmenu', () => {
         this.details(ss);
       }))
     });

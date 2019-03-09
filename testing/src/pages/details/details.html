@@ -14,7 +14,7 @@
 </ion-header>
 
 <ion-content>
-
+  <h3 class="responsable">Responsable: {{ss.RESPONSABLE.NOM_TRATAMIENTO_RESPONSABLE}} {{ss.RESPONSABLE.APATERNO_RESPONSABLE}} {{ss.RESPONSABLE.AMATERNO_RESPONSABLE}} {{ss.RESPONSABLE.NOMBRE_RESPONSABLE}} </h3>
    <ion-list>
      <ion-item-divider>Programas</ion-item-divider>
       <button ion-item *ngFor="let actividad of actividades" (click)="goPrograma(actividad)">

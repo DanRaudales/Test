@@ -50,9 +50,13 @@ export class DetailsPage {
           array.push(this.ss)
           this.storage.set('favoritos', array);
         } else {
-          this.storage.set('favoritos', this.ss);
+          let array = [];
+          array.push(this.ss)
+          console.log("else",array);
+          this.storage.set('favoritos', array);
+
         }
-        
+
       });
     }
     else {
