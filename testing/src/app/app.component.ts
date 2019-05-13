@@ -6,6 +6,7 @@ import { timer } from 'rxjs/observable/timer';
 import { Storage } from '@ionic/storage';
 import { DetailsPage } from '../pages/details/details';
 import { HomePage } from '../pages/home/home';
+import {FavoritosPage } from '../pages/favoritos/favoritos'
 import { SlidesPage } from '../pages/slides/slides'
 import { ApiServiceProvider } from '../providers/api-service/api-service'
 
@@ -52,4 +53,9 @@ export class MyApp {
   buscar(carrera: String) {
     this.menuCtrl.close();
   }
+
+  goFavoritos(){
+    this.nav.push(FavoritosPage)
+  }
+
 }

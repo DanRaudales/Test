@@ -13,6 +13,7 @@ export class DetailsPage {
   iconClass: any;
   ss: any;
   star: any;
+  position: any;
   actividades:any[] = [1,2,3,4,5,6,7,8,9];
 
   constructor(
@@ -22,6 +23,7 @@ export class DetailsPage {
   ) {
     this.ss = navParams.get('lugar');
     this.star = navParams.get('star');
+    this.position = navParams.get('position')
     if (this.star){
       this.iconClass = 'icon-star'
     }
@@ -54,12 +56,16 @@ export class DetailsPage {
           array.push(this.ss)
           console.log("else",array);
           this.storage.set('favoritos', array);
-
         }
-
       });
     }
     else {
+      this.storage.get('favoritos').then((data) => {
+        let newFavs = data;
+        console.log(newFavs)
+        newFavs.splice(this.position, 1)
+        this.storage.set('favoritos', newFavs)
+      })
       this.iconClass = 'icon-default';
     }
   }

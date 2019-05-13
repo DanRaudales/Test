@@ -57,6 +57,22 @@ export class HomePage {
     });
   }
 
+  getFavsMarkers() {
+    this.storage.get('favoritos').then((data) => {
+      if (data) {
+        this.favoritos = data;
+        // Iterar en cada lugar que se recibe
+        this.favoritos.forEach(ss => {
+          let coor: any[] = [ss.DIRECCION.COORDENADAS.lat, ss.DIRECCION.COORDENADAS.lng]; // Crear un array con las coordenadas del lugar
+          // Añadir el lugar al array de los marcadores
+          this.markerFavorites.push(Leaflet.marker([coor[0], coor[1]]).bindPopup(ss.NOM_CORTO_PRESTATARIO).on('contextmenu', () => {
+            this.details(ss);
+          }))
+        });
+      }
+    });
+  }
+
   alertFavorites() {
     console.log(this.iconFavName)
     // Validar que alerta se va a mostrar si para mostrar o para ocultar los favoritos
@@ -121,10 +137,16 @@ export class HomePage {
               this.map.removeLayer(this.markers[i]) // Remover los marcadores del layer del mapa
             }
             this.markers = []; // Limpiar el array de los marcadores
-            this.showMarkers(this.favoritos); // Generar el nuevo array de los marcadores
-            this.markerGroup = Leaflet.layerGroup(this.markers) // Crear un layerGroup para el mapa
-            this.map.addLayer(this.markerGroup) // Añadir el nuevo layer al mapa
-            this.iconFavName = 'star'
+            this.getFavsMarkers();
+
+            setTimeout(() => {
+              this.showMarkers(this.favoritos); // Generar el nuevo array de los marcadores
+              this.markerGroup = Leaflet.layerGroup(this.markers) // Crear un layerGroup para el mapa
+              this.map.addLayer(this.markerGroup) // Añadir el nuevo layer al mapa
+              this.iconFavName = 'star'
+            }, 500);
+
+
           }
         },
         {
@@ -269,11 +291,11 @@ export class HomePage {
       // Añadir el lugar al array de los marcadores
       let servicio = 'Servicio Social'
       this.markers.push(Leaflet.marker([coor[0], coor[1]]).bindPopup(
-                                                                        '<p>'+ss.NOM_CORTO_PRESTATARIO+'</p>'+
-                                                                        '<p>'+ss.DIRECCION.CALLE+' Num.'+ss.DIRECCION.NUM_EXT+'</p>'+
-                                                                      '<a href="https://serviciosocial.ipn.mx/" target="_blank">' + servicio + '</a>').on('contextmenu', () => {
-        this.details(ss);
-      }))
+        '<p>' + ss.NOM_CORTO_PRESTATARIO + '</p>' +
+        '<p>' + ss.DIRECCION.CALLE + ' Num.' + ss.DIRECCION.NUM_EXT + '</p>' +
+        '<a href="https://serviciosocial.ipn.mx/" target="_blank">' + servicio + '</a>').on('contextmenu', () => {
+          this.details(ss);
+        }))
     });
   }
 

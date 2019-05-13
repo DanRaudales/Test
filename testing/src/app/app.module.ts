@@ -9,6 +9,7 @@ import { HomePage } from '../pages/home/home';
 import { DetailsPage } from '../pages/details/details';
 import { MapPage } from '../pages/map/map';
 import { FavoritesPage } from '../pages/favorites/favorites';
+import { FavoritosPage } from '../pages/favoritos/favoritos';
 import { ActividadPage } from '../pages/actividad/actividad';
 import { SlidesPage } from '../pages/slides/slides';
 
@@ -27,6 +28,7 @@ import { ApiServiceProvider } from '../providers/api-service/api-service';
     MapPage,
     ActividadPage,
     FavoritesPage,
+    FavoritosPage,
     SlidesPage,
     SearchfilterPipe
   ],
@@ -46,6 +48,7 @@ import { ApiServiceProvider } from '../providers/api-service/api-service';
     MapPage,
     ActividadPage,
     FavoritesPage,
+    FavoritosPage,
     SlidesPage
   ],
   providers: [

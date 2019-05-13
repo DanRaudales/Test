@@ -6,34 +6,9 @@
   </ion-header>
 
   <ion-content>
-    <!--ion-list>
-      <ion-item-divider>Seleccionar escuela:</ion-item-divider>
-      <ion-item>
-        <ion-label>Unidad académica</ion-label>
-        <ion-select>
-          <ion-option>UPIICSA</ion-option>
-          <ion-option>ESCOM</ion-option>
-          <ion-option>UPIITA</ion-option>
-        </ion-select>
-      </ion-item>
-
-      <ion-item-divider>Seleccionar carrera:</ion-item-divider>
-        <ion-item>
-      <ion-label>Programa académico</ion-label>
-      <ion-select [(ngModel)]="searchTerm" (ionChange)="setFilteredItems()">
-        <ion-option value="LCI">Lic. Ciencias de la informática</ion-option>
-        <ion-option value="INI">Ing. Informática</ion-option>
-        <ion-option value="LAI">Lic. Administración Industrial</ion-option>
-      </ion-select>
-    </ion-item>
-
-    </ion-list>
-    <button ion-button color="secondary" (click)="buscar(cadena)">Buscar</button -->
-
     <ion-list>
-      <ion-item-divider>Favoritos</ion-item-divider>
-      <button ion-item *ngFor="let favorito of favoritos" (click)="abrirFavorito(favorito)" detail-push>
-        {{favorito.Nombre}}
+      <button ion-item (click)="goFavoritos()" detail-push>
+        Favoritos
       </button>
     </ion-list>
   </ion-content>
