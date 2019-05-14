@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
 import { DetailsPage } from '../details/details'
 
@@ -21,7 +21,7 @@ export class FavoritosPage {
     }, 2000);
   }
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public storage: Storage) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public storage: Storage, public alertCtrl: AlertController) {
     this.favs = [];
   }
 
@@ -53,9 +53,27 @@ export class FavoritosPage {
   }
 
   dropFav(index) {
-    console.log(index)
-    this.favs.splice(index, 1)
-    this.storage.set('favoritos', this.favs)
+    let alert = this.alertCtrl.create({
+      title: '¿Eliminar de favoritos?',
+      message: this.favs[index].NOM_CORTO_PRESTATARIO + ' ya no formará parte de sus favoritos',
+      buttons: [
+        {
+          text: 'Quitar',
+          handler: () => {
+            console.log('Quitar de favoritos');
+            this.favs.splice(index, 1)
+            this.storage.set('favoritos', this.favs)
+          }
+        },
+        {
+          text: 'Cancelar',
+          handler: () => {
+
+          }
+        }
+      ]
+    });
+    alert.present();
   }
 
   back() {
